@@ -1,0 +1,24 @@
+{
+    "name": "redback-smartbike-mobile-back-end",
+    "version": "1.0.0",
+    "description": "Backend for Smartbike project to connect the front end (redback-smartbike-mobile-front-end), IoT and the VR game",
+    "type": "module",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yjsjade/redback-smartbike-mobile-back-end.git"
+    },
+    "dependencies": {
+        "@supabase/supabase-js": "^2.99.3",
+        "cors": "^2.8.6",
+        "dotenv": "^17.3.1",
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.14"
+    }
+}
