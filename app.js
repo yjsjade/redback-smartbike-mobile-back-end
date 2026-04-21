@@ -9,14 +9,18 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
-app.use(cors());
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Accept']
+}));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/bikes', bikeRoutes);
-app.use('/api/auth', authRoutes);
+app.use('/', authRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5000;
